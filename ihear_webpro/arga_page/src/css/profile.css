@@ -29,7 +29,7 @@ body {
     position: relative;
 }
 
-/* Button hidden by default */
+/* edit pp */
 .profile-edit-btn {
     position: absolute;
     bottom: 50px;
@@ -39,7 +39,7 @@ body {
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    display: none; /* Hidden by default */
+    display: none; /* Hidden biar g muncul */
     align-items: center;
     justify-content: center;
     cursor: pointer;

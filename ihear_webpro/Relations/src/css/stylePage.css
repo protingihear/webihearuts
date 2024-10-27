@@ -10,10 +10,10 @@
     display: flex;
     align-items: center;
     background-color: #8ecae6; /* Light blue background */
-    /* padding: 10px 20px; */
-    /* position: fixed; */
-    /* width: 100%; */
-/* } */ 
+/* padding: 10px 20px; */
+/* position: fixed; */
+/* width: 100%; */
+/* } */
 
 /* .navbar-brand {
     align-items: center; */
@@ -42,9 +42,9 @@
     text-decoration: none;
     font-size: 1rem;
     color: #033649; /* Dark blue text */
-    /* display: flex; */
-    /* align-items: center; */
-    /* gap: 5px; Space between icon and text */
+/* display: flex; */
+/* align-items: center; */
+/* gap: 5px; Space between icon and text */
 /* } */
 
 /* .navbar-links a:hover {
@@ -66,17 +66,17 @@
     height: 40px;
     border-radius: 50%;
     background-color: #b0b0b0; /* Gray background for placeholder */
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* color: white; */
-    /* font-weight: bold; */
-    /* font-size: 1rem; */
+/* display: flex; */
+/* align-items: center; */
+/* justify-content: center; */
+/* color: white; */
+/* font-weight: bold; */
+/* font-size: 1rem; */
 /* }  */
 
 body {
     /* overflow: hidden; */
-    overflow-x:hidden
+    overflow-x: hidden
 }
 
 .navbar-brand {
@@ -85,13 +85,10 @@ body {
 }
 
 
-
-
-
-
 /* CSS RELATIONS */
 
 .ContainerUtama {
+    margin-top: 80px;
     padding-top: 30px;
     height: 1000px;
     background-color: #F5F5FA;
@@ -199,43 +196,43 @@ body {
 .profile-info {
     display: flex;
     align-items: center;
-  }
+}
 
-  .profile-image {
+.profile-image {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 10px;
-  }
-  
-  .profile-image img {
+}
+
+.profile-image img {
     width: 100%;
     height: 100%;
-  } 
+}
 
 .teksProfile .namaProfile {
     font-size: 16px;
     font-weight: bold;
     margin: 0;
-  }
-  
+}
+
 .teksProfile .followersProf {
     font-size: 14px;
     color: #aaa;
     margin: 0;
-  }
+}
 
-  .teksUsername .usernameProf {
+.teksUsername .usernameProf {
     font-size: 16px;
     margin: 0;
-  }
-  
+}
+
 .teksUsername .tagProf {
     font-size: 14px;
     color: #aaa;
     margin: 0px;
-  }
+}
 
 .ProfilePostingan .profile-image {
     margin-top: 10px;

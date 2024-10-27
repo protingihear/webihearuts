@@ -1,0 +1,108 @@
+/* Mengatur style umum untuk body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Mengatur header tetap di atas */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #78b2cc;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Konten di dalam header */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Mengatur container utama */
+.content-container {
+    display: flex;
+    gap: 200px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f5f7fa;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+/* Mengatur area kamera */
+.camera-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.camera-frame {
+    width: 250px;
+    height: 480px;
+    border: 2px solid #78b2cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Mengatur button kamera */
+.camera-button {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #78b2cc;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Mengatur icon kamera di dalam button */
+.camera-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Mengatur area informasi */
+.info-section {
+    width: 300px;
+    height: 480px;
+    background-color: #cae9f5;
+    border-radius: 10px;
+    padding: 20px;
+}

@@ -1,0 +1,13 @@
+To Do :
+1. Responsive Konten Kiri
+2. Ganti Navbar yang baru ✅
+3. Responsive Konten KANAN
+4. Responsive Konten Tengah
+5. Bisa Mencari Teman di Search Sisi Kanan 
+6. Cleancode HTML 
+7. Cleancode CSS 
+8. Alert menambahkan kegiatan baru 
+9. Ikon di button Community sisi Kiri ✅
+10. Button Chat Pojok Bawah Kanan 
+11. Tampilan Beranda Chat kecil di Pojok Bawah Kanan 
+12. Buat Setiap Profile latar belakang nya orange

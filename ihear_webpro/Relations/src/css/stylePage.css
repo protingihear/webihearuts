@@ -285,7 +285,7 @@
 }
 
 .ContentKanan {
-    margin-left: 35px;
+    margin-top: 50px;
     height: 443px;
     border: 2px solid #BABABA;
     border-radius: 25px;
@@ -321,4 +321,8 @@
     margin-left: auto;
     margin-right: 10px;
     font-size: 18px;
+}
+
+.searchFriend {
+    height: auto;
 }

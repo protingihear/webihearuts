@@ -72,6 +72,7 @@
     font-size: 1rem;
 }
 
+/* CSS RELATIONS */
 
 .ContainerUtama {
     margin-top: 50px;
@@ -205,6 +206,17 @@
     margin: 0;
   }
 
+  .teksUsername .usernameProf {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+.teksUsername .tagProf {
+    font-size: 14px;
+    color: #aaa;
+    margin: 0px;
+  }
+
 .ProfilePostingan .profile-image {
     margin-top: 10px;
     margin-left: 10px;
@@ -270,4 +282,43 @@
     width: 25px;
     height: 25px;
     margin-right: 5px;
+}
+
+.ContentKanan {
+    margin-left: 35px;
+    height: 443px;
+    border: 2px solid #BABABA;
+    border-radius: 25px;
+}
+
+.ContentKanan .titleText {
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.requestFollowing {
+    width: 350px;
+    height: 70px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.requestFollowing .profile-image {
+    margin-left: 10px;
+}
+
+.Mollow {
+    border-radius: 24%;
+    border: none;
+    text-align: center;
+    background-color: #B0D9E3;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 18px;
 }

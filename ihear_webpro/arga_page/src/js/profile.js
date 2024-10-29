@@ -1,78 +1,103 @@
-$(document).ready(function () {
-    // Fetch user data from the JSON file using jQuery
-    $.ajax({
-        url: "https://api.jsonbin.io/v3/qs/671e50fae41b4d34e449b3a9", //sesuaiin lg ntar klo json expire 
-        method: "GET",
-        dataType: "json",
-        success: function (user) {
-            $('#name').val(user.record.username || '');
-            $('#bio').val(user.record.bio || '');
-            $('#email').val(user.record.email || '');
-            $('#gender-display').text(user.record.gender === "P" ? "Perempuan" : "Laki-Laki");
-            
-            if (user.record.profilePic) {
-                $('#profile-pic').attr('src', user.record.profilePic);
-            }
-        },
-        error: function () {
-            console.log("Error fetching data from JSONBin.");
-        }
-    });    
+document.addEventListener("DOMContentLoaded", function () {
+    let users = JSON.parse(localStorage.getItem("users"));
+    let user;
 
-    const $editButton = $(".btn.btn-primary");
-    $editButton.on("click", function () {
-        if ($editButton.text() === "Edit") {
-            $editButton.text("Save");
+    if (users && users.length > 0) {
+        user = users[0];
+    } else {
+        user = {};
+    }
+
+    document.getElementById("name").value = user.username || '';
+    document.getElementById("bio").value = user.bio || '';
+    document.getElementById("email").value = user.email || '';
+    if (user.gender === "P") {
+        document.getElementById("gender-display").textContent = "Perempuan";
+    } else {
+        document.getElementById("gender-display").textContent = "Laki-Laki";
+    }
+    if (user.profilePic) {
+        document.getElementById("profile-pic").src = user.profilePic;
+    }
+
+    // Edit button event listener
+    let editButton = document.querySelector(".btn.btn-primary");
+    editButton.addEventListener("click", function () {
+        if (editButton.textContent === "Edit") {
+            editButton.textContent = "Save";
             enableEditing();
         } else {
-            $editButton.text("Edit");
+            editButton.textContent = "Edit";
             saveData();
+            disableEditing();
         }
     });
 
-    // Ganti PP
-    $('#profile-pic-input').on("change", function (event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
+    // Profile picture upload event listener
+    document.getElementById("profile-pic-input").addEventListener("change", function (event) {
+        if (event.target.files.length > 0) {
+            let reader = new FileReader();
             reader.onload = function (e) {
-                $('#profile-pic').attr('src', e.target.result);
+                document.getElementById("profile-pic").src = e.target.result;
             };
-            reader.readAsDataURL(file);
+            reader.readAsDataURL(event.target.files[0]);
         }
     });
+    
 });
 
+// Enable editing mode
 function enableEditing() {
-    $('#bio, #name, #email, #password').removeAttr('disabled');
-    $('#gender-view').addClass("d-none");
-    $('#gender-edit').removeClass("d-none");
+    document.getElementById("bio").removeAttribute("disabled");
+    document.getElementById("name").removeAttribute("disabled");
+    document.getElementById("email").removeAttribute("disabled");
+    document.getElementById("password").removeAttribute("disabled");
 
-    $('.edit-icon').show();
-    $('.profile-edit-btn').show();
+    document.getElementById("gender-view").classList.add("d-none");
+    document.getElementById("gender-edit").classList.remove("d-none");
 
-    const currentGender = $('#gender-display').text() === "Perempuan" ? "P" : "L";
-    $(`#gender-${currentGender.toLowerCase()}`).prop('checked', true);
+    document.querySelector(".edit-icon").style.display = "inline-block";
+    document.querySelector(".profile-edit-btn").style.display = "flex";
+
+    // Set gender radio button based on current gender display
+    let currentGender = document.getElementById("gender-display").textContent;
+    if (currentGender === "Perempuan") {
+        document.getElementById("gender-p").checked = true;
+    } else {
+        document.getElementById("gender-l").checked = true;
+    }
 }
 
+// Disable editing mode
+function disableEditing() {
+    document.getElementById("bio").setAttribute("disabled", true);
+    document.getElementById("name").setAttribute("disabled", true);
+    document.getElementById("email").setAttribute("disabled", true);
+    document.getElementById("password").setAttribute("disabled", true);
+
+    document.getElementById("gender-view").classList.remove("d-none");
+    document.getElementById("gender-edit").classList.add("d-none");
+
+    document.querySelector(".edit-icon").style.display = "none";
+    document.querySelector(".profile-edit-btn").style.display = "none";
+}
+
+// Save data to local storage
 function saveData() {
-    const userData = {
-        username: $('#name').val(),
-        bio: $('#bio').val(),
-        email: $('#email').val(),
-        password: $('#password').val(),
-        gender: $('input[name="gender"]:checked').val(),
-        profilePic: $('#profile-pic').attr('src')
+    let userData = {
+        username: document.getElementById("name").value,
+        bio: document.getElementById("bio").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        gender: document.querySelector('input[name="gender"]:checked').value,
+        profilePic: document.getElementById("profile-pic").src
     };
 
-    // CEK UBAH DATA
-    console.log("Simulated save:", JSON.stringify(userData));
-
-    $('#gender-display').text(userData.gender === "P" ? "Perempuan" : "Laki-Laki");
-    $('#gender-view').removeClass("d-none");
-    $('#gender-edit').addClass("d-none");
-    
-    $('#bio, #name, #email, #password').attr('disabled', true);
-    $('.edit-icon').hide();
-    $('.profile-edit-btn').hide();
+    localStorage.setItem("users", JSON.stringify([userData]));
+    if (userData.gender === "P") {
+        document.getElementById("gender-display").textContent = "Perempuan";
+    } else {
+        document.getElementById("gender-display").textContent = "Laki-Laki";
+    }
+    alert("Profile updated successfully!");
 }

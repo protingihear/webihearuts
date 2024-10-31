@@ -159,6 +159,27 @@ body {
     margin-left: auto;
     position: absolute;
     right: 10px;
+    top: 50px;
+}
+
+.teksStatusKegiatan .inputStatus {
+    font-size: 20px;
+    border: 2px solid #BABABA; /* Menambahkan border untuk konsistensi */
+    border-radius: 15px; /* Radius sudut untuk tampilan lembut */
+    resize: none; /* Mencegah perubahan ukuran */
+    width: 450px; /* Menentukan lebar */
+    height: 60px; /* Menentukan tinggi */
+    padding: 10px; /* Memberikan padding agar teks tidak menempel di tepi */
+    margin-top: 10px; /* Memberikan jarak dari elemen lain */
+    box-sizing: border-box; /* Menghitung padding dan border dalam lebar total */
+    outline: none; /* Menghilangkan outline saat fokus */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Efek transisi */
+}
+
+/* Menambahkan efek saat textarea dalam keadaan fokus */
+.teksStatusKegiatan .inputStatus:focus {
+    border-color: #B0D9E3; /* Ubah warna border saat fokus */
+    box-shadow: 0 0 5px rgba(176, 217, 227, 0.5); /* Tambahkan efek bayangan */
 }
 
 .BtnCommunity {

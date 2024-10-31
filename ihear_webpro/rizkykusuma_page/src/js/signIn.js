@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (user) {
             alert("Login berhasil! Selamat datang kembali.");
             
-            window.location.href = "welcome.html"; 
+            window.location.href ="../kiw_Homepage/HomePage.html"; 
         } else {
             alert("Email atau password salah. Coba lagi.");
         }

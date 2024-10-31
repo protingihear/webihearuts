@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="src/css/profile.css">
+</head>
+<!--NAVBAR-->
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #86c5d8; padding: 20px 30px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+        <a class="navbar-brand" href="#" style="font-weight: bold; font-size: 24px; color: #00354e;">
+            <i class="fas fa-ear-listen" style="margin-right: 8px;"></i> IHear
+        </a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 20px;">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="font-size: 18px; margin-right: 20px; color: #00354e; display: flex; align-items: center;">
+                        <i class="fas fa-home" style="margin-right: 8px;"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-size: 18px; margin-right: 20px; color: #00354e; display: flex; align-items: center;">
+                        <i class="fas fa-globe" style="margin-right: 8px;"></i> Relations
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../rizkykusuma_page/lesson.html" style="font-size: 18px; margin-right: 20px; color: #00354e; display: flex; align-items: center;">
+                        <i class="fas fa-book" style="margin-right: 8px;"></i> Lesson
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="profile-icon" style="margin-left: auto;">
+            <a href="../arga_page/profile.html">
+                <img src="https://via.placeholder.com/40" class="rounded-circle" alt="Profile" 
+                    style="width: 45px; height: 45px; border: 2px solid #fff;">
+            </a>
+        </div>
+    </nav>
+
+     <div class="container mt-5">
+        <div class="avatar-container">
+            <img id="profile-pic" src="" alt="Profile Picture" class="profile-img">
+            <input type="file" id="profile-pic-input" class="d-none" accept="image/*">
+            <button class="btn profile-edit-btn" onclick="document.getElementById('profile-pic-input').click();">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zm1.415 3L11 1.707 13.293 4l1.268-1.268zM10.5 3.5L2 12v1h1l8.5-8.5-1-1zM1 13v2h2l-.5-.5L2.707 13H1zm12.5-2.5h-1V9h1v1.5zm-3 3h-1v-1h1v1zm1-5h-1V6h1v2.5zm-3 0h-1V6h1v2.5zm-4 0h-1V6h1v2.5zm3 3h-1v-1h1v1z"/>
+                </svg>
+            </button>
+            <button id="edit-profile-btn" class="btn btn-primary mt-3">Edit</button>
+        </div>
+    
+        <div class="form-container">
+            <form id="sign-up-form">
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" class="form-control border-0" id="name" placeholder="NANTI NAMA DARI LOCAL STORAGE" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea class="form-control border-0" id="bio" placeholder="Enter your bio" disabled></textarea>
+                    <i class="fas fa-pencil-alt edit-icon d-none"></i>
+                </div>
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+                    <div id="gender-view" class="form-control border-0"><span id="gender-display"></span></div>
+                    <div id="gender-edit" class="d-none">
+                        <input type="radio" id="gender-p" name="gender" value="P"><label for="gender-p">P</label>
+                        <input type="radio" id="gender-l" name="gender" value="L"><label for="gender-l">L</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control border-0" id="email" placeholder="Enter your email" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control border-0" id="password" disabled>
+                </div>
+                <button type="button" class="btn btn-success mt-3" id="save-btn" onclick="saveData()" style="display: none;">Save</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <script src="src/js/profile.js"></script>
+</body>
+
+</html>

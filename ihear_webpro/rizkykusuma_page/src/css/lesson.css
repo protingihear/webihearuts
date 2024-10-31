@@ -2,10 +2,6 @@
     font-size: 14px;
     color: #6c757d;
 }
-.py-6 {
-    padding-top: 12rem; /* Sesuaikan dengan ukuran yang diinginkan */
-    padding-bottom: 4rem; /* Sesuaikan dengan ukuran yang diinginkan */
-}
 /* Container untuk gambar agar ukurannya konsisten */
 .image-container {
     width: 50%;

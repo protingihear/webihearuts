@@ -5,10 +5,22 @@ body {
     overflow: hidden;
 }
 
-.navbar-brand {
-    color: #004a6b;
-    font-weight: bold;
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    background-color: #499CB1;
 }
+
+.icon-circle i {
+    font-size: 2rem;
+    color: white;
+}
+
 
 .container-fluid {
     padding: 0;

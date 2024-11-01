@@ -114,11 +114,6 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-.bawah p {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #004a6b;
-}
 
 .circle-icon.active {
     background-color: grey;

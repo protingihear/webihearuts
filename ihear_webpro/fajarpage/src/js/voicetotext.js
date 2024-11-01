@@ -1,4 +1,3 @@
-// Get elements
 const micButton = document.querySelector('.mic-container .circle-icon');
 const stopButton = document.querySelector('.stop-container .circle-icon');
 const judul=document.querySelector('.atas h1')

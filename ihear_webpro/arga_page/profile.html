@@ -65,6 +65,7 @@
                 <div class="form-group">
                     <label for="name">Nama</label>
                     <input type="text" class="form-control border-0" id="name" placeholder="NANTI NAMA DARI LOCAL STORAGE" disabled>
+                    <div id="name-error" class="text-danger mt-1" style="display: none; font-size: 0.9em;"></div>
                 </div>
                 <div class="form-group">
                     <label for="bio">Bio</label>
@@ -86,6 +87,12 @@
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" class="form-control border-0" id="password" disabled>
+                    <div id="password-error" class="text-danger mt-1" style="display: none; font-size: 0.9em;"></div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" class="form-control border-0" id="confirm-password" disabled>
+                    <div id="confirm-password-error" class="text-danger mt-1" style="display: none; font-size: 0.9em;"></div>
                 </div>
                 <button type="button" class="btn btn-success mt-3" id="save-btn" onclick="saveData()" style="display: none;">Save</button>
             </form>

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scan to Text</title>
+  <title>Sign Up IHear</title>
+  <!-- Bootstrap Icons and Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/css/voicetotext.css">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link type="text/css" rel="stylesheet" href="src/css/scanToText.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <!-- Navbar -->
 
   <nav class="navbar navbar-expand-lg"
     style="background-color: #86c5d8; padding: 20px 30px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
@@ -55,23 +57,41 @@
       </a>
     </div>
   </nav>
+  <div class="container-fluid d-flex flex-column justify-content-between  vh-100">
+    <div class="atas ">
+      <h1>Mulai<br> Menerjemahkan</h1>
+    </div>
+    <div class="tengah">
+      <img src="assets/images/waveform.png" alt="Waveform">
+    </div>
+    <div class="bawah d-flex flex-column">
+      <div class="icon-container d-flex flex-row ">
+        <div class="stop-container ">
+          <div class="circle-icon stop-icon">
+            <i class="bi bi-x"></i>
+          </div>
+        </div>
 
-  <div class="content-container">
-    <div class="camera-section">
-      <div class="camera-frame">
+        <div class="mic-container">
+          <div class="circle-icon mic-icon">
+            <i class="bi bi-mic"></i>
+          </div>
+        </div>
       </div>
-      <button class="camera-button">
-        <img src="assets/images/camera.png" alt="Camera Icon">
-      </button>
-    </div>
 
-    <div class="info-section" id="infoSection">
 
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="src/js/scanToText.js"></script>
+    <!-- Bootstrap and Popper.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-QJHtvGhmr9CIsS2NMSK4BujtQOgJQ5hK/pK7VtrmpeccKxKjrWJmJ6OHW/Wz3x92"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-pks4sgsHIdMgqqiF/BcaGuZNUF1w+QfpqoPBOkhtrJ/ohcOJYrB4B7Ae7XKk5P7s"
+      crossorigin="anonymous"></script>
+    <script src="src/js/voicetotext.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </body>
 
 </html>

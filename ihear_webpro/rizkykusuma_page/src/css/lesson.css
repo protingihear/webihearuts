@@ -1,57 +1,94 @@
-.words {
-    font-size: 14px;
-    color: #6c757d;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-.py-6 {
-    padding-top: 12rem; /* Sesuaikan dengan ukuran yang diinginkan */
-    padding-bottom: 4rem; /* Sesuaikan dengan ukuran yang diinginkan */
-}
-/* Container untuk gambar agar ukurannya konsisten */
-.image-container {
-    width: 50%;
-    height: 100px;
+
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 10px;
-    text-align: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-/* Ukuran dan pengaturan gambar */
-.lesson-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Progress bar styling */
-.progress {
-    height: 10px;
-    border-radius: 5px;
-    background-color: #B0D9E3;
-    /* Background bar */
-}
-
-.progress-bar {
-    background-color: #8EC5D2;
-    /* Warna progress */
-}
-
-.bar {
-    background-color: #499CB1;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 70%;
 }
 
 .card {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.card:hover {
-    transform: scale(1.05);
+.word-count {
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.card img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+}
+
+.progress {
+    height: 8px;
+    width: 70%; 
+}
+
+.progress-section {
+    width: 25%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.chart p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bar-chart {
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+    height: 100px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bar {
+    width: 50px;
+    background-color: #007bff;
+    border-radius: 5px 5px 0 0;
 }

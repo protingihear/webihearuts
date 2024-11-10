@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (user) {
             alert("Login berhasil! Selamat datang kembali.");
             
-            window.location.href = "welcome.html"; 
+            window.location.href ="../Kiki_HomePage_1302220020 (Terbaru)/homepage.html"; 
         } else {
             alert("Email atau password salah. Coba lagi.");
         }

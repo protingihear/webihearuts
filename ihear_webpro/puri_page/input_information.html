@@ -7,6 +7,7 @@
     <title>Scan to Text</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link type="text/css" rel="stylesheet" href="src/css/information.css">
 </head>
 
@@ -53,29 +54,51 @@
         </div>
     </nav>
 
-    <div class="container mt-2">
-        <div class="d-flex justify-content-end">
-            <a href="input_information.html" class="dot-menu">⋮</a>
-        </div>
-    </div>
-
-
-    <div class="container py-4" id="newsPage">
-        <div class="row g-4">
-
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Berita">
-                    <div class="card-body">
-                        <p class="text-success mb-1">detikJatim</p>
-                        <p class="text-muted">Senin, 11 Nov 2024 19.30 WIB</p>
-                        <h6 class="card-title fw-bold">Telkomsel Hadirkan Layanan Untuk Teman Tuli di GraPARI</h6>
-                    </div>
-                </div>
+    <div class="container mt-4">
+        <h4 class="mb-4">Tambah Berita</h4>
+        <form id="newsForm">
+            <div class="mb-3">
+                <label for="source" class="form-label">Sumber</label>
+                <input type="text" id="source" class="form-control" placeholder="Masukkan sumber">
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="uploadDate" class="form-label">Tanggal Upload</label>
+                <input type="date" id="uploadDate" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="uploadTime" class="form-label">Waktu Upload</label>
+                <input type="time" id="uploadTime" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Judul</label>
+                <input type="text" id="title" class="form-control" placeholder="Masukkan judul">
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Isi</label>
+                <textarea id="content" class="form-control" rows="3" placeholder="Masukkan isi berita"></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="index.html" class="btn btn-secondary me-2">Cancel</a>
+                <button type="button" class="btn btn-primary" onclick="saveNews()">Simpan</button>
+            </div>
+        </form>
     </div>
 
+    <script>
+        function saveNews() {
+            const source = document.getElementById('source').value;
+            const uploadDate = document.getElementById('uploadDate').value;
+            const uploadTime = document.getElementById('uploadTime').value;
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            const newsData = JSON.parse(localStorage.getItem('newsData')) || [];
+            newsData.push({ source, uploadDate, uploadTime, title, content });
+            localStorage.setItem('newsData', JSON.stringify(newsData));
+
+            window.location.href = 'information.html';
+        }
+    </script>
 </body>
 
 </html>
